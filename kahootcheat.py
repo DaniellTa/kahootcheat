@@ -8,11 +8,11 @@ s = ur.urlopen(url)
 sl = s.read()
 
 q = d["questions"]
-shape_list = ["red", "blue", "yellow", "green"]
+colours_list = ["red", "blue", "yellow", "green"]
 
 for index, slide in enumerate(q):
     if slide.get("type") == "quiz":
         for i in range(len(slide.get("choices"))):
             if slide["choices"][i]["correct"] == True:
                 print("Question number: {}\n{}\n{}\n".format(
-                    index + 1, slide["choices"][i].get("answer"), shape_list[i]))
+                    index + 1, slide["choices"][i].get("answer"), colours_list[i]))

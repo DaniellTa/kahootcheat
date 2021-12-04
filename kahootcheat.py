@@ -9,6 +9,6 @@ colours_list = ["red", "blue", "yellow", "green"]
 for index, slide in enumerate(q):
     if slide.get("type") == "quiz":
         for i in range(len(slide.get("choices"))):
-            if slide["choices"][i]["correct"] == True:
+            if slide["choices"][i]["correct"]:
                 print("Question number: {}\n{}\n{}\n".format(
                     index + 1, slide["choices"][i].get("answer"), colours_list[i]))
